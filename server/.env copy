@@ -1,0 +1,6 @@
+MONGO_ATLAS_URI=mongodb+srv://admin:admin123@event.sv6ps.mongodb.net/?retryWrites=true&w=majority&appName=event
+STRIPE_KEY=sfsfkjsbfjkdsdsb
+NODE_MAILER_USER=abhinash.price@zohomail.in
+NODE_MAILER_PASS=cumjee@143
+JWT_SECRET=sbcjscbjasbchjewasn
+PORT = 5000
