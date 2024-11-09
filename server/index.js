@@ -34,11 +34,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cookieParser());
-app.use(cors(
-    {
-        origin:process.env.DEPLOYED_URL
-    }
-));
+app.use(cors());
 
 app.use("/", paymentRouter);
 app.use("/user", userRouter);
