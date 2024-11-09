@@ -20,7 +20,7 @@ export default function NavBar() {
         }
         console.log(userIdCookie)
         try {
-            const url = `http://localhost:5000/user/details`;
+            const url = `${process.env.NEXT_PUBLIC_API_URL}/user/details`;
             console.log("Fetch URL:", url);
             const response = await fetch(url, {
                 method: "POST",

@@ -52,7 +52,7 @@ export default function signup({ userIdCookie }) {
     const handleVerifyEmail = async (event) => {
         event.preventDefault();
         const response = await fetch(
-            `http://localhost:5000/user/signup`,
+            `${process.env.NEXT_PUBLIC_API_URL}/user/signup`,
             {
                 method: "POST",
                 headers: {
@@ -94,7 +94,7 @@ export default function signup({ userIdCookie }) {
         const regExp = /^[A-Za-z]{3}\d{7}$/; // regular expression pattern for tttnnnnnnn format
         if (regExp.test(regNumber)) {
             const response = await fetch(
-                `http://localhost:5000/user/signup/verify`,
+                `${process.env.NEXT_PUBLIC_API_URL}/user/signup/verify`,
                 {
                     method: "POST",
                     headers: {

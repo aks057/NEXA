@@ -24,7 +24,7 @@ function UserDashboard() {
     const fetchAllEvents = async () => {
         try {
             const response = await fetch(
-                `http://localhost:5000/getallevents`
+                `${process.env.NEXT_PUBLIC_API_URL}/getallevents`
             );
            
             if (!response.ok) {
