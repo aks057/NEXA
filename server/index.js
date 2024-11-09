@@ -34,7 +34,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use(cookieParser());
-app.use(cors());
+app.use(cors(
+    {
+        origin:process.env.DEPLOYED_URL
+    }
+));
 
 app.use("/", paymentRouter);
 app.use("/user", userRouter);
